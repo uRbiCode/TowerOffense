@@ -1,0 +1,2 @@
+D:\Programs\UE4 Projects\TowerOffense\Intermediate\Build\Win64\UE4Editor\Development\TowerOffense\Definitions.TowerOffense.h
+D:\Programs\UE4 Projects\TowerOffense\Source\TowerOffense\TowerOffense.h

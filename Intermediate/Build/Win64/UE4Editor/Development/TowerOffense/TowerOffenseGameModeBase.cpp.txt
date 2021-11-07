@@ -1,0 +1,7 @@
+D:\Programs\UE4 Projects\TowerOffense\Intermediate\Build\Win64\UE4Editor\Development\TowerOffense\Definitions.TowerOffense.h
+D:\Programs\UE4 Projects\TowerOffense\Source\TowerOffense\TowerOffenseGameModeBase.h
+D:\Programs\Unreal Engine 4\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+D:\Programs\Unreal Engine 4\UE_4.26\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+D:\Programs\Unreal Engine 4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+D:\Programs\Unreal Engine 4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+D:\Programs\UE4 Projects\TowerOffense\Intermediate\Build\Win64\UE4Editor\Inc\TowerOffense\TowerOffenseGameModeBase.generated.h

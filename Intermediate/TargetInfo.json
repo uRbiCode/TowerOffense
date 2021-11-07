@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "TowerOffense",
+			"Path": "D:\\Programs\\UE4 Projects\\TowerOffense\\Source\\TowerOffense.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "TowerOffenseEditor",
+			"Path": "D:\\Programs\\UE4 Projects\\TowerOffense\\Source\\TowerOffenseEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\Programs\\UE4 Projects\\TowerOffense\\Source\\TowerOffense\\TowerOffense.Build.cs",
+		"D:\\Programs\\UE4 Projects\\TowerOffense\\Source\\TowerOffense.Target.cs",
+		"D:\\Programs\\UE4 Projects\\TowerOffense\\Source\\TowerOffenseEditor.Target.cs"
+	],
+	"EngineVersion": "4.26.2"
+}
