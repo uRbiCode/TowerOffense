@@ -36,7 +36,7 @@ public: \
 
 #define TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API APawnTank(const FObjectInitializer& ObjectInitializer); \
+	NO_API APawnTank(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(APawnTank) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, APawnTank); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APawnTank); \
@@ -48,6 +48,8 @@ public:
 
 
 #define TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_15_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API APawnTank() { }; \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API APawnTank(APawnTank&&); \
@@ -59,10 +61,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APawnTank); \
 
 
 #define TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_15_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__SpringArm() { return STRUCT_OFFSET(APawnTank, SpringArm); } \
-	FORCEINLINE static uint32 __PPO__Camera() { return STRUCT_OFFSET(APawnTank, Camera); } \
-	FORCEINLINE static uint32 __PPO__MoveSpeed() { return STRUCT_OFFSET(APawnTank, MoveSpeed); } \
-	FORCEINLINE static uint32 __PPO__RotateSpeed() { return STRUCT_OFFSET(APawnTank, RotateSpeed); }
+	FORCEINLINE static uint32 __PPO__MoveSpeed() { return STRUCT_OFFSET(APawnTank, MoveSpeed); }
 
 
 #define TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_12_PROLOG

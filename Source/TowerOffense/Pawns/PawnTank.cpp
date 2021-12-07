@@ -3,43 +3,32 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
 
-void APawnTank::CalculateMoveInput(float Value)
+FVector APawnTank::CalculateMovement(float Value)
 {
-	MoveDirection = FVector(Value * MoveSpeed * GetWorld()->DeltaTimeSeconds, 0, 0);
+	return FVector(Value * GetWorld()->DeltaTimeSeconds , 0, 0);
 }
 
-void APawnTank::CalculateRotateInput(float Value)
-{
-	float RotateAmount = Value * RotateSpeed * GetWorld()->DeltaTimeSeconds;
-	FRotator Rotation = FRotator(0, RotateAmount, 0);
-	RotationDirection = FQuat(Rotation);
-}
+//void APawnTank::CalculateRotateInput(float Value)
+//{
+//	float RotateAmount = Value * RotateSpeed * GetWorld()->DeltaTimeSeconds;
+//	FRotator Rotation = FRotator(0, RotateAmount, 0);
+//	RotationDirection = FQuat(Rotation);
+//}
 
 void APawnTank::Move()
 {
-	AddActorLocalOffset(MoveDirection, true);
+	AddActorLocalOffset(CalculateMovement(MoveSpeed), true);
 }
 
-void APawnTank::Rotate()
-{
-	AddActorLocalRotation(RotationDirection, true);
-}
-
-APawnTank::APawnTank()
-{
-	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("Spring Arm"));
-	SpringArm->SetupAttachment(RootComponent);
-
-	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
-	Camera->SetupAttachment(SpringArm);
-}
+//void APawnTank::Rotate()
+//{
+//	AddActorLocalRotation(RotationDirection, true);
+//}
 
 // Called when the game starts or when spawned
 void APawnTank::BeginPlay()
 {
 	Super::BeginPlay();
-
-	PlayerControllerRef = Cast<APlayerController>(GetController());
 }
 
 void APawnTank::HandleDestruction()
@@ -52,25 +41,7 @@ void APawnTank::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	Rotate();
+	//Rotate();
 	Move();
-
-	if (PlayerControllerRef)
-	{
-		FHitResult TraceHitResult;
-		PlayerControllerRef->GetHitResultUnderCursor(ECC_Visibility, false, TraceHitResult);
-		FVector HitLocation = TraceHitResult.ImpactPoint;
-
-		RotateTurret(HitLocation);
-	}
-}
-
-// Called to bind functionality to input
-void APawnTank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
-	PlayerInputComponent->BindAxis("MoveForward", this, &APawnTank::CalculateMoveInput);
-	PlayerInputComponent->BindAxis("Turn", this, &APawnTank::CalculateRotateInput);
-	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &APawnTank::Fire);
+	UE_LOG(LogTemp, Warning, TEXT("X:%f Y:%f Z:%f"), GetActorLocation().X, GetActorLocation().Y, GetActorLocation().Z);
 }
