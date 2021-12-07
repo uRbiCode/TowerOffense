@@ -76,13 +76,15 @@ void APawnBase::RotateTurret(FVector LookAtTarget)
 
 void APawnBase::CheckFireCondition()
 {
-	//prevent firing for no reason
-	if (!IsValid(CurrentTarget))
+	if (ReturnDistanceToEnemy(CurrentTarget) <= FireRange)
 	{
-		return;
+		//prevent firing for no reason
+		if (!IsValid(CurrentTarget))
+		{
+			return;
+		}
+			Fire();
 	}
-
-		Fire();
 }
 
 void APawnBase::Fire()
