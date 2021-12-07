@@ -66,7 +66,9 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APawnBase); \
 	FORCEINLINE static uint32 __PPO__TurretMesh() { return STRUCT_OFFSET(APawnBase, TurretMesh); } \
 	FORCEINLINE static uint32 __PPO__GunMesh() { return STRUCT_OFFSET(APawnBase, GunMesh); } \
 	FORCEINLINE static uint32 __PPO__ProjectileSpawnPoint() { return STRUCT_OFFSET(APawnBase, ProjectileSpawnPoint); } \
-	FORCEINLINE static uint32 __PPO__ProjectileClass() { return STRUCT_OFFSET(APawnBase, ProjectileClass); }
+	FORCEINLINE static uint32 __PPO__ProjectileClass() { return STRUCT_OFFSET(APawnBase, ProjectileClass); } \
+	FORCEINLINE static uint32 __PPO__FireRate() { return STRUCT_OFFSET(APawnBase, FireRate); } \
+	FORCEINLINE static uint32 __PPO__FireRange() { return STRUCT_OFFSET(APawnBase, FireRange); }
 
 
 #define TowerOffense_Source_TowerOffense_Pawns_PawnBase_h_12_PROLOG

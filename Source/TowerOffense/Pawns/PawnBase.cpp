@@ -53,7 +53,7 @@ void APawnBase::AcquireTarget(const float& fire_range)
 
 float APawnBase::ReturnDistanceToEnemy(AActor* enemy) const
 {
-	if (enemy == nullptr)
+	if (!IsValid(CurrentTarget))
 	{
 		return 0.f;
 	}
@@ -72,6 +72,17 @@ void APawnBase::RotateTurret(FVector LookAtTarget)
 	TurretRotation.Yaw -= 90.f;
 
 	TurretMesh->SetWorldRotation(TurretRotation);
+}
+
+void APawnBase::CheckFireCondition()
+{
+	//prevent firing for no reason
+	if (!IsValid(CurrentTarget))
+	{
+		return;
+	}
+
+		Fire();
 }
 
 void APawnBase::Fire()

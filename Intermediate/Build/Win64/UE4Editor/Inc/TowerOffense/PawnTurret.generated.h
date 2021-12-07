@@ -60,11 +60,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APawnTurret); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(APawnTurret)
 
 
-#define TowerOffense_Source_TowerOffense_Pawns_PawnTurret_h_14_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__FireRate() { return STRUCT_OFFSET(APawnTurret, FireRate); } \
-	FORCEINLINE static uint32 __PPO__FireRange() { return STRUCT_OFFSET(APawnTurret, FireRange); }
-
-
+#define TowerOffense_Source_TowerOffense_Pawns_PawnTurret_h_14_PRIVATE_PROPERTY_OFFSET
 #define TowerOffense_Source_TowerOffense_Pawns_PawnTurret_h_11_PROLOG
 #define TowerOffense_Source_TowerOffense_Pawns_PawnTurret_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

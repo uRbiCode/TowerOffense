@@ -24,6 +24,12 @@ void APawnTank::Move()
 void APawnTank::BeginPlay()
 {
 	Super::BeginPlay();
+
+	//create firing timer based on FireRate
+	GetWorld()->GetTimerManager().SetTimer(FireRateTimerHandle, this, &APawnTank::CheckFireCondition, FireRate, true);
+
+	PopulateEnemyList();
+	AcquireTarget(FireRange);
 }
 
 void APawnTank::HandleDestruction()
@@ -37,4 +43,14 @@ void APawnTank::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	Move();
+
+	if (!IsValid(CurrentTarget) || ReturnDistanceToEnemy(CurrentTarget) > FireRange)
+	{
+		PopulateEnemyList();
+		AcquireTarget(FireRange);
+	}
+	if (IsValid(CurrentTarget))
+	{
+		RotateTurret(CurrentTarget->GetActorLocation());
+	}
 }

@@ -88,7 +88,7 @@ void EmptyLinkFunctionForGeneratedCodePawnTank() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APawnTank, 277381060);
+	IMPLEMENT_CLASS(APawnTank, 3661669919);
 	template<> TOWEROFFENSE_API UClass* StaticClass<APawnTank>()
 	{
 		return APawnTank::StaticClass();
