@@ -20,11 +20,9 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = "true"))
 		float FireRange = 500.f;
 
-	APawnTank* PlayerPawn;
 
 	void CheckFireCondition();
-
-	float ReturnDistanceToPlayer();
+	void PopulateEnemyList() override;
 
 public:
 	// Called every frame

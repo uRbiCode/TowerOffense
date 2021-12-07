@@ -1,9 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "PawnBase.h"
 #include "Components/BoxComponent.h"
 #include "TowerOffense/Actors/ProjectileBase.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 APawnBase::APawnBase()
@@ -33,6 +32,35 @@ APawnBase::APawnBase()
 	ProjectileSpawnPoint->SetupAttachment(GunMesh);
 }
 
+void APawnBase::PopulateEnemyList()
+{
+	UE_LOG(LogTemp, Fatal, TEXT("PopulateEnemyList must be overriden!"));
+	exit(EXIT_FAILURE);
+}
+
+void APawnBase::AcquireTarget(const float& fire_range)
+{
+	for (AActor* enemy : EnemyList)
+	{
+		const float distance = ReturnDistanceToEnemy(enemy);
+		if (distance <= fire_range)
+		{
+			CurrentTarget = enemy;
+			break;
+		}
+	}
+}
+
+float APawnBase::ReturnDistanceToEnemy(AActor* enemy) const
+{
+	if (enemy == nullptr)
+	{
+		return 0.f;
+	}
+
+	return FVector::Dist(enemy->GetActorLocation(), GetActorLocation());
+}
+
 void APawnBase::RotateTurret(FVector LookAtTarget)
 {
 	FVector LookAtTargetCleaned = FVector(LookAtTarget.X, LookAtTarget.Y, TurretMesh->GetComponentLocation().Z);
@@ -60,6 +88,8 @@ void APawnBase::Fire()
 		TempProjectile->SetOwner(this);
 	}
 }
+
+
 
 void APawnBase::HandleDestruction()
 {

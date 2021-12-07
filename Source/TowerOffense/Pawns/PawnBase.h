@@ -41,8 +41,13 @@ public:
 	virtual void HandleDestruction();
 
 protected:
+	TArray<AActor*> EnemyList;
+	AActor* CurrentTarget = nullptr;
+
+	virtual void PopulateEnemyList();
+	void AcquireTarget(const float& fire_range);
+	float ReturnDistanceToEnemy(AActor* enemy) const;
 
 	void RotateTurret(FVector LookAtTarget);
-
 	void Fire();
 };

@@ -54,9 +54,7 @@ void EmptyLinkFunctionForGeneratedCodePawnTank() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APawnTank_Statics::NewProp_MoveSpeed_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Movement" },
-		{ "Comment", "//FQuat RotationDirection;\n" },
 		{ "ModuleRelativePath", "Pawns/PawnTank.h" },
-		{ "ToolTip", "FQuat RotationDirection;" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APawnTank_Statics::NewProp_MoveSpeed = { "MoveSpeed", nullptr, (EPropertyFlags)0x0040000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APawnTank, MoveSpeed), METADATA_PARAMS(Z_Construct_UClass_APawnTank_Statics::NewProp_MoveSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APawnTank_Statics::NewProp_MoveSpeed_MetaData)) };
@@ -90,7 +88,7 @@ void EmptyLinkFunctionForGeneratedCodePawnTank() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APawnTank, 243639884);
+	IMPLEMENT_CLASS(APawnTank, 277381060);
 	template<> TOWEROFFENSE_API UClass* StaticClass<APawnTank>()
 	{
 		return APawnTank::StaticClass();

@@ -2,28 +2,23 @@
 #include "PawnTank.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
+#include "Kismet/GameplayStatics.h"
+#include "PawnTurret.h"
 
 FVector APawnTank::CalculateMovement(float Value)
 {
 	return FVector(Value * GetWorld()->DeltaTimeSeconds , 0, 0);
 }
 
-//void APawnTank::CalculateRotateInput(float Value)
-//{
-//	float RotateAmount = Value * RotateSpeed * GetWorld()->DeltaTimeSeconds;
-//	FRotator Rotation = FRotator(0, RotateAmount, 0);
-//	RotationDirection = FQuat(Rotation);
-//}
+void APawnTank::PopulateEnemyList()
+{
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), APawnTurret::StaticClass(), EnemyList);
+}
 
 void APawnTank::Move()
 {
 	AddActorLocalOffset(CalculateMovement(MoveSpeed), true);
 }
-
-//void APawnTank::Rotate()
-//{
-//	AddActorLocalRotation(RotationDirection, true);
-//}
 
 // Called when the game starts or when spawned
 void APawnTank::BeginPlay()
@@ -41,7 +36,5 @@ void APawnTank::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	//Rotate();
 	Move();
-	UE_LOG(LogTemp, Warning, TEXT("X:%f Y:%f Z:%f"), GetActorLocation().X, GetActorLocation().Y, GetActorLocation().Z);
 }

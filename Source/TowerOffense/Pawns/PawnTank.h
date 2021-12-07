@@ -15,18 +15,13 @@ class TOWEROFFENSE_API APawnTank : public APawnBase
 	GENERATED_BODY()
 
 private:
-	//FQuat RotationDirection;
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement", meta = (AllowPrivateAccess = "true"))
 		float MoveSpeed = 100.f;
-	/*UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement", meta = (AllowPrivateAccess = "true"))
-		float RotateSpeed = 100.f;*/	
 
 	FVector CalculateMovement(float Value);
-	//void CalculateRotateInput(float Value);
 
+	void PopulateEnemyList() override;
 	void Move();
-	//void Rotate();
 
 public:
 	// Called every frame
