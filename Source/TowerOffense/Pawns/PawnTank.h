@@ -15,37 +15,17 @@ class TOWEROFFENSE_API APawnTank : public APawnBase
 	GENERATED_BODY()
 
 private:
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-		USpringArmComponent* SpringArm;
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-		UCameraComponent* Camera;
-
-	FVector MoveDirection;
-	FQuat RotationDirection;
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement", meta = (AllowPrivateAccess = "true"))
 		float MoveSpeed = 100.f;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement", meta = (AllowPrivateAccess = "true"))
-		float RotateSpeed = 100.f;
 
-	APlayerController* PlayerControllerRef;
+	FVector CalculateMovement(float Value);
 
-	void CalculateMoveInput(float Value);
-	void CalculateRotateInput(float Value);
-
+	void PopulateEnemyList() override;
 	void Move();
-	void Rotate();
 
 public:
-
-	APawnTank();
-
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	virtual void HandleDestruction() override;
 

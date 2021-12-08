@@ -3,28 +3,9 @@
 #include "Kismet/GameplayStatics.h"
 #include "PawnTank.h"
 
-void APawnTurret::CheckFireCondition()
+void APawnTurret::PopulateEnemyList()
 {
-	// If Player == null || is dead then bail
-	if (!PlayerPawn)
-	{
-		return;
-	}
-	//If Player is ing range then fire
-	if (ReturnDistanceToPlayer() <= FireRange)
-	{
-		Fire();
-	}
-}
-
-float APawnTurret::ReturnDistanceToPlayer()
-{
-	if (!PlayerPawn)
-	{
-		return 0.f;
-	}
-
-	return FVector::Dist(PlayerPawn->GetActorLocation(), GetActorLocation());
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), APawnTank::StaticClass(), EnemyList);
 }
 
 // Called when the game starts or when spawned
@@ -32,9 +13,11 @@ void APawnTurret::BeginPlay()
 {
 	Super::BeginPlay();
 
+	//create firing timer based on FireRate
 	GetWorld()->GetTimerManager().SetTimer(FireRateTimerHandle, this, &APawnTurret::CheckFireCondition, FireRate, true);
 
-	PlayerPawn = Cast<APawnTank>(UGameplayStatics::GetPlayerPawn(this, 0));
+	PopulateEnemyList();
+	AcquireTarget(FireRange);
 }
 
 void APawnTurret::HandleDestruction()
@@ -42,6 +25,7 @@ void APawnTurret::HandleDestruction()
 	Super::HandleDestruction();
 
 	Destroy();
+
 }
 
 // Called every frame
@@ -49,10 +33,13 @@ void APawnTurret::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (!PlayerPawn || ReturnDistanceToPlayer() > FireRange)
+	if (!IsValid(CurrentTarget) || ReturnDistanceToEnemy(CurrentTarget) > FireRange)
 	{
-		return;
+		PopulateEnemyList();
+		AcquireTarget(FireRange);
 	}
-
-	RotateTurret(PlayerPawn->GetActorLocation());
+	if (IsValid(CurrentTarget))
+	{
+		RotateTurret(CurrentTarget->GetActorLocation());
+	}
 }

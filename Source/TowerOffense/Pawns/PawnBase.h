@@ -41,8 +41,20 @@ public:
 	virtual void HandleDestruction();
 
 protected:
+	FTimerHandle FireRateTimerHandle;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = "true"))
+		float FireRate = 1.f;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = "true"))
+		float FireRange = 500.f;
 
+	TArray<AActor*> EnemyList;
+	AActor* CurrentTarget = nullptr;
+
+	virtual void PopulateEnemyList();
+	void AcquireTarget(const float& fire_range);
+	float ReturnDistanceToEnemy(AActor* enemy) const;
 	void RotateTurret(FVector LookAtTarget);
 
+	void CheckFireCondition();
 	void Fire();
 };
