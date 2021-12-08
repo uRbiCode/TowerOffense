@@ -106,5 +106,5 @@ void APawnBase::Fire()
 
 void APawnBase::HandleDestruction()
 {
-	//TODO:: implement
+	Destroy();
 }

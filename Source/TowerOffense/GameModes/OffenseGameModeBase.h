@@ -15,10 +15,14 @@ class TOWEROFFENSE_API AOffenseGameModeBase : public AGameModeBase
 	GENERATED_BODY()
 
 private:
-	APawnTank* PlayerTank;
-	int32 TargetTurrets = 0;
+	TArray<AActor*> TankActors;
+	TArray<AActor*> TurretActors;
+
+	int32 InitialPlayerPawns;
+	int32 InitialTargetTurrets;
 
 	int32 GetTargetTurretCount();
+	int32 GetPlayerPawnsCount();
 	void HandleGameStart();
 	void HandleGameOver(bool PlayerWon);
 
@@ -30,8 +34,4 @@ protected:
 		int32 StartDelay = 3;
 
 	virtual void BeginPlay() override;
-	UFUNCTION(BlueprintImplementableEvent)
-		void GameStart();
-	UFUNCTION(BlueprintImplementableEvent)
-		void GameOver(bool PlayerWon);
 };

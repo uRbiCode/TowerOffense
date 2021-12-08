@@ -15,38 +15,37 @@ void AOffenseGameModeBase::BeginPlay()
 
 void AOffenseGameModeBase::ActorDied(AActor* DeadActor)
 {
-	if (DeadActor == PlayerTank)
+	if (APawnTank* DestroyedTank = Cast<APawnTank>(DeadActor))
 	{
-		PlayerTank->HandleDestruction();
-		HandleGameOver(false);
+		DestroyedTank->HandleDestruction();
+		UE_LOG(LogTemp, Warning, TEXT("Destroyed player tank. %d/%d remain"), GetPlayerPawnsCount(), InitialPlayerPawns);
 	}
 	else if (APawnTurret* DestroyedTurret = Cast<APawnTurret>(DeadActor))
 	{
 		DestroyedTurret->HandleDestruction();
-
-		if (--TargetTurrets == 0)
-		{
-			HandleGameOver(true);
-		}
+		UE_LOG(LogTemp, Warning, TEXT("Destroyed turret tank. %d/%d remain"), GetTargetTurretCount(), InitialTargetTurrets);
 	}
 }
 
 void AOffenseGameModeBase::HandleGameStart()
 {
-	TargetTurrets = GetTargetTurretCount();
-	PlayerTank = Cast<APawnTank>(UGameplayStatics::GetPlayerPawn(this, 0));
-
-	GameStart();
+	InitialTargetTurrets = GetTargetTurretCount();
+	InitialPlayerPawns = GetPlayerPawnsCount();
 }
 
 void AOffenseGameModeBase::HandleGameOver(bool PlayerWon)
 {
-	GameOver(PlayerWon);
+	;
 }
 
 int32 AOffenseGameModeBase::GetTargetTurretCount()
 {
-	TArray<AActor*> TurretActors;
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), APawnTurret::StaticClass(), TurretActors);
 	return TurretActors.Num();;
+}
+
+int32 AOffenseGameModeBase::GetPlayerPawnsCount()
+{
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), APawnTank::StaticClass(), TankActors);
+	return TankActors.Num();
 }

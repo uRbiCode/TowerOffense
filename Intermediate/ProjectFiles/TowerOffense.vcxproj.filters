@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\TowerOffense.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{B5132030-AB8B-4387-8AEE-EFF5D9783845}</UniqueIdentifier>
+      <UniqueIdentifier>{7E08A1A9-BB50-4B0E-BE65-FAC7449837D9}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TowerOffense.Target.cs">
       <Filter>Source</Filter>
@@ -11,8 +11,10 @@
     <None Include="..\..\Source\TowerOffenseEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{2D52139C-96C2-4C47-A3D4-AEF41F562317}</UniqueIdentifier>
+      <UniqueIdentifier>{BE3AE22B-B0C0-447D-A62D-26BF0F5D1082}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +29,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\TowerOffense">
-      <UniqueIdentifier>{16C0FE40-93EC-4CD8-92B1-B7583F43565D}</UniqueIdentifier>
+      <UniqueIdentifier>{DEC9985B-3C63-4A24-9D07-D9ED4596F4D5}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TowerOffense\TowerOffense.Build.cs">
       <Filter>Source\TowerOffense</Filter>
@@ -45,7 +47,7 @@
       <Filter>Source\TowerOffense</Filter>
     </ClInclude>
     <Filter Include="Source\TowerOffense\Actors">
-      <UniqueIdentifier>{C54BE5D8-AA29-4162-A8EC-D59947FB7871}</UniqueIdentifier>
+      <UniqueIdentifier>{EC39DA5D-7F98-4717-B3E9-ABB13D0DC449}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\TowerOffense\Actors\ProjectileBase.cpp">
       <Filter>Source\TowerOffense\Actors</Filter>
@@ -54,7 +56,7 @@
       <Filter>Source\TowerOffense\Actors</Filter>
     </ClInclude>
     <Filter Include="Source\TowerOffense\Components">
-      <UniqueIdentifier>{3E4C55FF-751B-4E66-A2AD-32308B32BBBF}</UniqueIdentifier>
+      <UniqueIdentifier>{ADF926A3-60A9-403E-B626-7CE4A1C4AAB0}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\TowerOffense\Components\HealthComponent.cpp">
       <Filter>Source\TowerOffense\Components</Filter>
@@ -63,7 +65,7 @@
       <Filter>Source\TowerOffense\Components</Filter>
     </ClInclude>
     <Filter Include="Source\TowerOffense\GameModes">
-      <UniqueIdentifier>{7A3FA056-1050-4694-B625-40547D565943}</UniqueIdentifier>
+      <UniqueIdentifier>{AE609553-DF5A-4BC2-848D-CD29404C27E6}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\TowerOffense\GameModes\OffenseGameModeBase.cpp">
       <Filter>Source\TowerOffense\GameModes</Filter>
@@ -72,7 +74,7 @@
       <Filter>Source\TowerOffense\GameModes</Filter>
     </ClInclude>
     <Filter Include="Source\TowerOffense\Pawns">
-      <UniqueIdentifier>{3D508EC4-A134-4D40-991A-707FC93B3FA8}</UniqueIdentifier>
+      <UniqueIdentifier>{4DD0A703-37B9-475E-BE0C-729AE56F59C6}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\TowerOffense\Pawns\PawnBase.cpp">
       <Filter>Source\TowerOffense\Pawns</Filter>
@@ -91,6 +93,15 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\TowerOffense\Pawns\PawnTurret.h">
       <Filter>Source\TowerOffense\Pawns</Filter>
+    </ClInclude>
+    <Filter Include="Source\TowerOffense\Volumes">
+      <UniqueIdentifier>{993A5527-9CC4-45B0-AF44-1B65A3ABEBC2}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\TowerOffense\Volumes\EndGameTriggerVolume.cpp">
+      <Filter>Source\TowerOffense\Volumes</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TowerOffense\Volumes\EndGameTriggerVolume.h">
+      <Filter>Source\TowerOffense\Volumes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

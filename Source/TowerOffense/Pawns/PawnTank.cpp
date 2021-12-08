@@ -35,6 +35,8 @@ void APawnTank::BeginPlay()
 void APawnTank::HandleDestruction()
 {
 	Super::HandleDestruction();
+
+	
 }
 
 // Called every frame
@@ -49,7 +51,7 @@ void APawnTank::Tick(float DeltaTime)
 		PopulateEnemyList();
 		AcquireTarget(FireRange);
 	}
-	if (IsValid(CurrentTarget))
+	if (IsValid(CurrentTarget) && ReturnDistanceToEnemy(CurrentTarget) <= FireRange)
 	{
 		RotateTurret(CurrentTarget->GetActorLocation());
 	}
