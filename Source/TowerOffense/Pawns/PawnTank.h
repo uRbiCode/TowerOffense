@@ -2,12 +2,11 @@
 
 #pragma once
 
+#include "TowerOffense/GameStates/OffenseStateBase.h"
+#include "GameplayTagContainer.h"
 #include "CoreMinimal.h"
 #include "PawnBase.h"
 #include "PawnTank.generated.h"
-
-class USpringArmComponent;
-class UCameraComponent;
 
 UCLASS()
 class TOWEROFFENSE_API APawnTank : public APawnBase
@@ -18,12 +17,17 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement", meta = (AllowPrivateAccess = "true"))
 		float MoveSpeed = 100.f;
 
+
+	AOffenseStateBase* GameState;
 	FVector CalculateMovement(float Value);
 
 	void PopulateEnemyList() override;
 	void Move();
 
 public:
+	UPROPERTY()
+	FGameplayTagContainer TankTags;
+
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 

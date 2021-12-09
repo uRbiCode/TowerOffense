@@ -6,7 +6,6 @@
 #include "GameFramework/GameModeBase.h"
 #include "OffenseGameModeBase.generated.h"
 
-class APawnTurret;
 class APawnTank;
 
 UCLASS()
@@ -15,23 +14,20 @@ class TOWEROFFENSE_API AOffenseGameModeBase : public AGameModeBase
 	GENERATED_BODY()
 
 private:
-	APawnTank* PlayerTank;
-	int32 TargetTurrets = 0;
+	void UpdateTargetTurretCount();
+	void UpdatePlayerPawnsCount();	
 
-	int32 GetTargetTurretCount();
-	void HandleGameStart();
-	void HandleGameOver(bool PlayerWon);
+	void CheckEndGameConditions();
+	void HandleGameOver();
+
+	int32 GetInitialTanksCount();
+	int32 GetInitialTurretsCount();
+	int32 GetCurrentTanksCount();
+	int32 GetCurrentTurretsCount();
 
 public:
-	void ActorDied(AActor* DeadActor);
+	AOffenseGameModeBase();
 
-protected:
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Game Loop")
-		int32 StartDelay = 3;
-
-	virtual void BeginPlay() override;
-	UFUNCTION(BlueprintImplementableEvent)
-		void GameStart();
-	UFUNCTION(BlueprintImplementableEvent)
-		void GameOver(bool PlayerWon);
+	void ActorDied(AActor* DeadActor);	
+	void UpdateEndGameTanks(APawnTank* Tank);
 };

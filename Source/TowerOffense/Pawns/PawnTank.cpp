@@ -1,7 +1,5 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 #include "PawnTank.h"
-#include "GameFramework/SpringArmComponent.h"
-#include "Camera/CameraComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "PawnTurret.h"
 
@@ -20,6 +18,11 @@ void APawnTank::Move()
 	AddActorLocalOffset(CalculateMovement(MoveSpeed), true);
 }
 
+void APawnTank::HandleDestruction()
+{
+	Super::HandleDestruction();
+}
+
 // Called when the game starts or when spawned
 void APawnTank::BeginPlay()
 {
@@ -30,11 +33,8 @@ void APawnTank::BeginPlay()
 
 	PopulateEnemyList();
 	AcquireTarget(FireRange);
-}
 
-void APawnTank::HandleDestruction()
-{
-	Super::HandleDestruction();
+	GameState = Cast<AOffenseStateBase>(UGameplayStatics::GetGameState(GetWorld()));
 }
 
 // Called every frame
@@ -49,7 +49,7 @@ void APawnTank::Tick(float DeltaTime)
 		PopulateEnemyList();
 		AcquireTarget(FireRange);
 	}
-	if (IsValid(CurrentTarget))
+	if (IsValid(CurrentTarget) && ReturnDistanceToEnemy(CurrentTarget) <= FireRange)
 	{
 		RotateTurret(CurrentTarget->GetActorLocation());
 	}

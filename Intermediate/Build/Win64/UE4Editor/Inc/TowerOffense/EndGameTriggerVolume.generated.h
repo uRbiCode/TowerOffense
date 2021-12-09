@@ -1,0 +1,102 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+/*===========================================================================
+	Generated code exported from UnrealHeaderTool.
+	DO NOT modify this manually! Edit the corresponding .h files instead!
+===========================================================================*/
+
+#include "UObject/ObjectMacros.h"
+#include "UObject/ScriptMacros.h"
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
+#ifdef TOWEROFFENSE_EndGameTriggerVolume_generated_h
+#error "EndGameTriggerVolume.generated.h already included, missing '#pragma once' in EndGameTriggerVolume.h"
+#endif
+#define TOWEROFFENSE_EndGameTriggerVolume_generated_h
+
+#define TowerOffense_Source_TowerOffense_Volumes_EndGameTriggerVolume_h_14_SPARSE_DATA
+#define TowerOffense_Source_TowerOffense_Volumes_EndGameTriggerVolume_h_14_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnOverlapBegin);
+
+
+#define TowerOffense_Source_TowerOffense_Volumes_EndGameTriggerVolume_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnOverlapBegin);
+
+
+#define TowerOffense_Source_TowerOffense_Volumes_EndGameTriggerVolume_h_14_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesAEndGameTriggerVolume(); \
+	friend struct Z_Construct_UClass_AEndGameTriggerVolume_Statics; \
+public: \
+	DECLARE_CLASS(AEndGameTriggerVolume, ATriggerVolume, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/TowerOffense"), NO_API) \
+	DECLARE_SERIALIZER(AEndGameTriggerVolume)
+
+
+#define TowerOffense_Source_TowerOffense_Volumes_EndGameTriggerVolume_h_14_INCLASS \
+private: \
+	static void StaticRegisterNativesAEndGameTriggerVolume(); \
+	friend struct Z_Construct_UClass_AEndGameTriggerVolume_Statics; \
+public: \
+	DECLARE_CLASS(AEndGameTriggerVolume, ATriggerVolume, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/TowerOffense"), NO_API) \
+	DECLARE_SERIALIZER(AEndGameTriggerVolume)
+
+
+#define TowerOffense_Source_TowerOffense_Volumes_EndGameTriggerVolume_h_14_STANDARD_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API AEndGameTriggerVolume(const FObjectInitializer& ObjectInitializer); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AEndGameTriggerVolume) \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AEndGameTriggerVolume); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AEndGameTriggerVolume); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API AEndGameTriggerVolume(AEndGameTriggerVolume&&); \
+	NO_API AEndGameTriggerVolume(const AEndGameTriggerVolume&); \
+public:
+
+
+#define TowerOffense_Source_TowerOffense_Volumes_EndGameTriggerVolume_h_14_ENHANCED_CONSTRUCTORS \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API AEndGameTriggerVolume(AEndGameTriggerVolume&&); \
+	NO_API AEndGameTriggerVolume(const AEndGameTriggerVolume&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AEndGameTriggerVolume); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AEndGameTriggerVolume); \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AEndGameTriggerVolume)
+
+
+#define TowerOffense_Source_TowerOffense_Volumes_EndGameTriggerVolume_h_14_PRIVATE_PROPERTY_OFFSET
+#define TowerOffense_Source_TowerOffense_Volumes_EndGameTriggerVolume_h_11_PROLOG
+#define TowerOffense_Source_TowerOffense_Volumes_EndGameTriggerVolume_h_14_GENERATED_BODY_LEGACY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	TowerOffense_Source_TowerOffense_Volumes_EndGameTriggerVolume_h_14_PRIVATE_PROPERTY_OFFSET \
+	TowerOffense_Source_TowerOffense_Volumes_EndGameTriggerVolume_h_14_SPARSE_DATA \
+	TowerOffense_Source_TowerOffense_Volumes_EndGameTriggerVolume_h_14_RPC_WRAPPERS \
+	TowerOffense_Source_TowerOffense_Volumes_EndGameTriggerVolume_h_14_INCLASS \
+	TowerOffense_Source_TowerOffense_Volumes_EndGameTriggerVolume_h_14_STANDARD_CONSTRUCTORS \
+public: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+#define TowerOffense_Source_TowerOffense_Volumes_EndGameTriggerVolume_h_14_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	TowerOffense_Source_TowerOffense_Volumes_EndGameTriggerVolume_h_14_PRIVATE_PROPERTY_OFFSET \
+	TowerOffense_Source_TowerOffense_Volumes_EndGameTriggerVolume_h_14_SPARSE_DATA \
+	TowerOffense_Source_TowerOffense_Volumes_EndGameTriggerVolume_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	TowerOffense_Source_TowerOffense_Volumes_EndGameTriggerVolume_h_14_INCLASS_NO_PURE_DECLS \
+	TowerOffense_Source_TowerOffense_Volumes_EndGameTriggerVolume_h_14_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> TOWEROFFENSE_API UClass* StaticClass<class AEndGameTriggerVolume>();
+
+#undef CURRENT_FILE_ID
+#define CURRENT_FILE_ID TowerOffense_Source_TowerOffense_Volumes_EndGameTriggerVolume_h
+
+
+PRAGMA_ENABLE_DEPRECATION_WARNINGS

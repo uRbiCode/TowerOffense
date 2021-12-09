@@ -1,0 +1,28 @@
+D:\Programs\UE4 Projects\TowerOffense\Intermediate\Build\Win64\UE4Editor\Development\TowerOffense\Definitions.TowerOffense.h
+D:\Programs\Unreal Engine 4\UE_4.26\Engine\Source\Runtime\Engine\Classes\Kismet/GameplayStatics.h
+D:\Programs\Unreal Engine 4\UE_4.26\Engine\Source\Runtime\Engine\Classes\Kismet/KismetSystemLibrary.h
+D:\Programs\Unreal Engine 4\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h
+D:\Programs\Unreal Engine 4\UE_4.26\Engine\Source\Runtime\Engine\Classes\Engine/CollisionProfile.h
+D:\Programs\Unreal Engine 4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CollisionProfile.generated.h
+D:\Programs\Unreal Engine 4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetSystemLibrary.generated.h
+D:\Programs\Unreal Engine 4\UE_4.26\Engine\Source\Runtime\Engine\Classes\Sound/DialogueTypes.h
+D:\Programs\Unreal Engine 4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DialogueTypes.generated.h
+D:\Programs\Unreal Engine 4\UE_4.26\Engine\Source\Runtime\Engine\Classes\Kismet\GameplayStaticsTypes.h
+D:\Programs\Unreal Engine 4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStaticsTypes.generated.h
+D:\Programs\Unreal Engine 4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStatics.generated.h
+D:\Programs\UE4 Projects\TowerOffense\Source\TowerOffense/Pawns/PawnTank.h
+D:\Programs\UE4 Projects\TowerOffense\Source\TowerOffense/GameStates/OffenseStateBase.h
+D:\Programs\Unreal Engine 4\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/GameStateBase.h
+D:\Programs\Unreal Engine 4\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+D:\Programs\Unreal Engine 4\UE_4.26\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+D:\Programs\Unreal Engine 4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+D:\Programs\Unreal Engine 4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+D:\Programs\Unreal Engine 4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameStateBase.generated.h
+D:\Programs\UE4 Projects\TowerOffense\Intermediate\Build\Win64\UE4Editor\Inc\TowerOffense\OffenseStateBase.generated.h
+D:\Programs\Unreal Engine 4\UE_4.26\Engine\Source\Runtime\GameplayTags\Classes\GameplayTagContainer.h
+D:\Programs\Unreal Engine 4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\GameplayTags\GameplayTagContainer.generated.h
+D:\Programs\UE4 Projects\TowerOffense\Source\TowerOffense\Pawns\PawnBase.h
+D:\Programs\UE4 Projects\TowerOffense\Intermediate\Build\Win64\UE4Editor\Inc\TowerOffense\PawnBase.generated.h
+D:\Programs\UE4 Projects\TowerOffense\Intermediate\Build\Win64\UE4Editor\Inc\TowerOffense\PawnTank.generated.h
+D:\Programs\UE4 Projects\TowerOffense\Source\TowerOffense/Pawns/PawnTurret.h
+D:\Programs\UE4 Projects\TowerOffense\Intermediate\Build\Win64\UE4Editor\Inc\TowerOffense\PawnTurret.generated.h

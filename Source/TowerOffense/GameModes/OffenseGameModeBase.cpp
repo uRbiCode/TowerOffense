@@ -4,49 +4,74 @@
 #include "OffenseGameModeBase.h"
 #include "TowerOffense/Pawns/PawnTank.h"
 #include "TowerOffense/Pawns/PawnTurret.h"
+#include "TowerOffense/GameStates/OffenseStateBase.h"
 #include "Kismet/GameplayStatics.h"
 
-void AOffenseGameModeBase::BeginPlay()
-{
-	Super::BeginPlay();
 
-	HandleGameStart();
+AOffenseGameModeBase::AOffenseGameModeBase()
+{
+	GameStateClass = AOffenseStateBase::StaticClass();
 }
 
 void AOffenseGameModeBase::ActorDied(AActor* DeadActor)
 {
-	if (DeadActor == PlayerTank)
+	if (APawnTank* DestroyedTank = Cast<APawnTank>(DeadActor))
 	{
-		PlayerTank->HandleDestruction();
-		HandleGameOver(false);
+		DestroyedTank->HandleDestruction();
+		UpdatePlayerPawnsCount();
+		UE_LOG(LogTemp, Warning, TEXT("Destroyed player tank. %d/%d remain"), GetCurrentTanksCount(), GetInitialTanksCount());
 	}
 	else if (APawnTurret* DestroyedTurret = Cast<APawnTurret>(DeadActor))
 	{
 		DestroyedTurret->HandleDestruction();
-
-		if (--TargetTurrets == 0)
-		{
-			HandleGameOver(true);
-		}
+		UpdateTargetTurretCount();
+		UE_LOG(LogTemp, Warning, TEXT("Destroyed turret tank. %d/%d remain"), GetCurrentTurretsCount(), GetInitialTurretsCount());
 	}
 }
 
-void AOffenseGameModeBase::HandleGameStart()
+void AOffenseGameModeBase::UpdateEndGameTanks(APawnTank* Tank)
 {
-	TargetTurrets = GetTargetTurretCount();
-	PlayerTank = Cast<APawnTank>(UGameplayStatics::GetPlayerPawn(this, 0));
-
-	GameStart();
+	GetGameState<AOffenseStateBase>()->EndGameTankActors.Add(Tank);
+	UE_LOG(LogTemp, Warning, TEXT("%d tanks reached endgame"), GetGameState<AOffenseStateBase>()->EndGameTankActors.Num());
 }
 
-void AOffenseGameModeBase::HandleGameOver(bool PlayerWon)
+void AOffenseGameModeBase::UpdateTargetTurretCount()
 {
-	GameOver(PlayerWon);
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), APawnTurret::StaticClass(), GetGameState<AOffenseStateBase>()->TurretActors);
 }
 
-int32 AOffenseGameModeBase::GetTargetTurretCount()
+void AOffenseGameModeBase::UpdatePlayerPawnsCount()
 {
-	TArray<AActor*> TurretActors;
-	UGameplayStatics::GetAllActorsOfClass(GetWorld(), APawnTurret::StaticClass(), TurretActors);
-	return TurretActors.Num();;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), APawnTank::StaticClass(), GetGameState<AOffenseStateBase>()->TankActors);
+}
+
+void AOffenseGameModeBase::CheckEndGameConditions()
+{
+	//TODO: implement
+}
+
+void AOffenseGameModeBase::HandleGameOver()
+{
+	//TODO: implement
+}
+
+
+int32 AOffenseGameModeBase::GetInitialTanksCount()
+{
+	return GetGameState<AOffenseStateBase>()->InitialTanksCount;
+}
+
+int32 AOffenseGameModeBase::GetInitialTurretsCount()
+{
+	return GetGameState<AOffenseStateBase>()->InitialTurretsCount;
+}
+
+int32 AOffenseGameModeBase::GetCurrentTanksCount()
+{
+	return GetGameState<AOffenseStateBase>()->TankActors.Num();
+}
+
+int32 AOffenseGameModeBase::GetCurrentTurretsCount()
+{
+	return GetGameState<AOffenseStateBase>()->TurretActors.Num();
 }

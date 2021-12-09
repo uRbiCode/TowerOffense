@@ -13,18 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TOWEROFFENSE_OffenseGameModeBase_generated_h
 
-#define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_15_SPARSE_DATA
-#define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_15_RPC_WRAPPERS
-#define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_15_EVENT_PARMS \
-	struct OffenseGameModeBase_eventGameOver_Parms \
-	{ \
-		bool PlayerWon; \
-	};
-
-
-#define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_15_CALLBACK_WRAPPERS
-#define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_15_INCLASS_NO_PURE_DECLS \
+#define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_14_SPARSE_DATA
+#define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_14_RPC_WRAPPERS
+#define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_14_RPC_WRAPPERS_NO_PURE_DECLS
+#define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAOffenseGameModeBase(); \
 	friend struct Z_Construct_UClass_AOffenseGameModeBase_Statics; \
@@ -33,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(AOffenseGameModeBase)
 
 
-#define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_15_INCLASS \
+#define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_14_INCLASS \
 private: \
 	static void StaticRegisterNativesAOffenseGameModeBase(); \
 	friend struct Z_Construct_UClass_AOffenseGameModeBase_Statics; \
@@ -42,9 +34,9 @@ public: \
 	DECLARE_SERIALIZER(AOffenseGameModeBase)
 
 
-#define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_15_STANDARD_CONSTRUCTORS \
+#define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_14_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AOffenseGameModeBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API AOffenseGameModeBase(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AOffenseGameModeBase) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AOffenseGameModeBase); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AOffenseGameModeBase); \
@@ -55,9 +47,7 @@ private: \
 public:
 
 
-#define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AOffenseGameModeBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
+#define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AOffenseGameModeBase(AOffenseGameModeBase&&); \
@@ -65,39 +55,31 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AOffenseGameModeBase); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AOffenseGameModeBase); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AOffenseGameModeBase)
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AOffenseGameModeBase)
 
 
-#define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_15_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__StartDelay() { return STRUCT_OFFSET(AOffenseGameModeBase, StartDelay); }
-
-
-#define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_12_PROLOG \
-	TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_15_EVENT_PARMS
-
-
-#define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_15_GENERATED_BODY_LEGACY \
+#define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_14_PRIVATE_PROPERTY_OFFSET
+#define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_11_PROLOG
+#define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_15_PRIVATE_PROPERTY_OFFSET \
-	TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_15_SPARSE_DATA \
-	TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_15_RPC_WRAPPERS \
-	TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_15_CALLBACK_WRAPPERS \
-	TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_15_INCLASS \
-	TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_15_STANDARD_CONSTRUCTORS \
+	TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_14_PRIVATE_PROPERTY_OFFSET \
+	TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_14_SPARSE_DATA \
+	TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_14_RPC_WRAPPERS \
+	TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_14_INCLASS \
+	TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_14_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_15_GENERATED_BODY \
+#define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_15_PRIVATE_PROPERTY_OFFSET \
-	TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_15_SPARSE_DATA \
-	TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_15_CALLBACK_WRAPPERS \
-	TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_15_INCLASS_NO_PURE_DECLS \
-	TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_15_ENHANCED_CONSTRUCTORS \
+	TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_14_PRIVATE_PROPERTY_OFFSET \
+	TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_14_SPARSE_DATA \
+	TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_14_INCLASS_NO_PURE_DECLS \
+	TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodePawnTank() {}
 	TOWEROFFENSE_API UClass* Z_Construct_UClass_APawnTank();
 	TOWEROFFENSE_API UClass* Z_Construct_UClass_APawnBase();
 	UPackage* Z_Construct_UPackage__Script_TowerOffense();
+	GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTagContainer();
 // End Cross Module References
 	void APawnTank::StaticRegisterNativesAPawnTank()
 	{
@@ -35,6 +36,10 @@ void EmptyLinkFunctionForGeneratedCodePawnTank() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MoveSpeed_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MoveSpeed;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TankTags_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_TankTags;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -58,8 +63,15 @@ void EmptyLinkFunctionForGeneratedCodePawnTank() {}
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APawnTank_Statics::NewProp_MoveSpeed = { "MoveSpeed", nullptr, (EPropertyFlags)0x0040000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APawnTank, MoveSpeed), METADATA_PARAMS(Z_Construct_UClass_APawnTank_Statics::NewProp_MoveSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APawnTank_Statics::NewProp_MoveSpeed_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APawnTank_Statics::NewProp_TankTags_MetaData[] = {
+		{ "ModuleRelativePath", "Pawns/PawnTank.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_APawnTank_Statics::NewProp_TankTags = { "TankTags", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APawnTank, TankTags), Z_Construct_UScriptStruct_FGameplayTagContainer, METADATA_PARAMS(Z_Construct_UClass_APawnTank_Statics::NewProp_TankTags_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APawnTank_Statics::NewProp_TankTags_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APawnTank_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APawnTank_Statics::NewProp_MoveSpeed,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APawnTank_Statics::NewProp_TankTags,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_APawnTank_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<APawnTank>::IsAbstract,
@@ -88,7 +100,7 @@ void EmptyLinkFunctionForGeneratedCodePawnTank() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APawnTank, 3661669919);
+	IMPLEMENT_CLASS(APawnTank, 1372093790);
 	template<> TOWEROFFENSE_API UClass* StaticClass<APawnTank>()
 	{
 		return APawnTank::StaticClass();

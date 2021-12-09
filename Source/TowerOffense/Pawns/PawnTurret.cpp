@@ -22,10 +22,7 @@ void APawnTurret::BeginPlay()
 
 void APawnTurret::HandleDestruction()
 {
-	Super::HandleDestruction();
-
-	Destroy();
-
+	Super::HandleDestruction();	
 }
 
 // Called every frame
@@ -38,7 +35,7 @@ void APawnTurret::Tick(float DeltaTime)
 		PopulateEnemyList();
 		AcquireTarget(FireRange);
 	}
-	if (IsValid(CurrentTarget))
+	if (IsValid(CurrentTarget) && ReturnDistanceToEnemy(CurrentTarget) <= FireRange)
 	{
 		RotateTurret(CurrentTarget->GetActorLocation());
 	}

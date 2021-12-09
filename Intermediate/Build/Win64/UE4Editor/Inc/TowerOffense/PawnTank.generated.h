@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TOWEROFFENSE_PawnTank_generated_h
 
-#define TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_15_SPARSE_DATA
-#define TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_15_RPC_WRAPPERS
-#define TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_15_INCLASS_NO_PURE_DECLS \
+#define TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_14_SPARSE_DATA
+#define TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_14_RPC_WRAPPERS
+#define TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_14_RPC_WRAPPERS_NO_PURE_DECLS
+#define TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPawnTank(); \
 	friend struct Z_Construct_UClass_APawnTank_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(APawnTank)
 
 
-#define TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_15_INCLASS \
+#define TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_14_INCLASS \
 private: \
 	static void StaticRegisterNativesAPawnTank(); \
 	friend struct Z_Construct_UClass_APawnTank_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(APawnTank)
 
 
-#define TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_15_STANDARD_CONSTRUCTORS \
+#define TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_14_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API APawnTank(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(APawnTank) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_15_ENHANCED_CONSTRUCTORS \
+#define TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_14_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API APawnTank() { }; \
 private: \
@@ -60,31 +60,31 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APawnTank); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(APawnTank)
 
 
-#define TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_15_PRIVATE_PROPERTY_OFFSET \
+#define TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_14_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__MoveSpeed() { return STRUCT_OFFSET(APawnTank, MoveSpeed); }
 
 
-#define TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_12_PROLOG
-#define TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_15_GENERATED_BODY_LEGACY \
+#define TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_11_PROLOG
+#define TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_15_PRIVATE_PROPERTY_OFFSET \
-	TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_15_SPARSE_DATA \
-	TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_15_RPC_WRAPPERS \
-	TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_15_INCLASS \
-	TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_15_STANDARD_CONSTRUCTORS \
+	TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_14_PRIVATE_PROPERTY_OFFSET \
+	TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_14_SPARSE_DATA \
+	TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_14_RPC_WRAPPERS \
+	TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_14_INCLASS \
+	TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_14_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_15_GENERATED_BODY \
+#define TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_15_PRIVATE_PROPERTY_OFFSET \
-	TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_15_SPARSE_DATA \
-	TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_15_INCLASS_NO_PURE_DECLS \
-	TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_15_ENHANCED_CONSTRUCTORS \
+	TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_14_PRIVATE_PROPERTY_OFFSET \
+	TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_14_SPARSE_DATA \
+	TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_14_INCLASS_NO_PURE_DECLS \
+	TowerOffense_Source_TowerOffense_Pawns_PawnTank_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
