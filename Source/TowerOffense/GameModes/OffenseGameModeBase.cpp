@@ -27,12 +27,40 @@ void AOffenseGameModeBase::ActorDied(AActor* DeadActor)
 		UpdateTargetTurretCount();
 		UE_LOG(LogTemp, Warning, TEXT("Destroyed turret tank. %d/%d remain"), GetCurrentTurretsCount(), GetInitialTurretsCount());
 	}
+
+	CheckEndGameConditions();
+}
+
+void AOffenseGameModeBase::CheckEndGameConditions()
+{
+	//no turret is alive
+	if (GetCurrentTurretsCount() == 0)
+	{
+		UE_LOG(LogTemp, Error, TEXT("GAME OVER: Every turret has been destroyed"));
+	}
+	//no tank is alive
+	 if (GetCurrentTanksCount() == 0)
+	{
+		UE_LOG(LogTemp, Error, TEXT("GAME OVER: Every tank has been destroyed"));
+	}
+
+	//every living tank has reached EndGame
+	else if (GetCurrentEndGameTanksCount() == GetCurrentTanksCount() || GetCurrentEndGameTanksCount() == GetInitialTanksCount())
+	{
+		UE_LOG(LogTemp, Error, TEXT("GAME OVER: Every living tank has reached EndGame"));
+	}
+}
+
+void AOffenseGameModeBase::HandleGameOver()
+{
+	//TODO: implement
 }
 
 void AOffenseGameModeBase::UpdateEndGameTanks(APawnTank* Tank)
 {
 	GetGameState<AOffenseStateBase>()->EndGameTankActors.Add(Tank);
-	UE_LOG(LogTemp, Warning, TEXT("%d tanks reached endgame"), GetGameState<AOffenseStateBase>()->EndGameTankActors.Num());
+	CheckEndGameConditions();
+	UE_LOG(LogTemp, Warning, TEXT("%d out of %d tanks reached endgame"), GetCurrentEndGameTanksCount(), GetCurrentTanksCount());
 }
 
 void AOffenseGameModeBase::UpdateTargetTurretCount()
@@ -44,17 +72,6 @@ void AOffenseGameModeBase::UpdatePlayerPawnsCount()
 {
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), APawnTank::StaticClass(), GetGameState<AOffenseStateBase>()->TankActors);
 }
-
-void AOffenseGameModeBase::CheckEndGameConditions()
-{
-	//TODO: implement
-}
-
-void AOffenseGameModeBase::HandleGameOver()
-{
-	//TODO: implement
-}
-
 
 int32 AOffenseGameModeBase::GetInitialTanksCount()
 {
@@ -74,4 +91,9 @@ int32 AOffenseGameModeBase::GetCurrentTanksCount()
 int32 AOffenseGameModeBase::GetCurrentTurretsCount()
 {
 	return GetGameState<AOffenseStateBase>()->TurretActors.Num();
+}
+
+int32 AOffenseGameModeBase::GetCurrentEndGameTanksCount()
+{
+	return GetGameState<AOffenseStateBase>()->EndGameTankActors.Num();
 }

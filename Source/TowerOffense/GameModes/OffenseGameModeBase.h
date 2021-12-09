@@ -14,16 +14,17 @@ class TOWEROFFENSE_API AOffenseGameModeBase : public AGameModeBase
 	GENERATED_BODY()
 
 private:
-	void UpdateTargetTurretCount();
-	void UpdatePlayerPawnsCount();	
-
 	void CheckEndGameConditions();
 	void HandleGameOver();
+
+	void UpdateTargetTurretCount();
+	void UpdatePlayerPawnsCount();
 
 	int32 GetInitialTanksCount();
 	int32 GetInitialTurretsCount();
 	int32 GetCurrentTanksCount();
 	int32 GetCurrentTurretsCount();
+	int32 GetCurrentEndGameTanksCount();
 
 public:
 	AOffenseGameModeBase();
