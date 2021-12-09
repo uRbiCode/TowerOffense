@@ -19,13 +19,13 @@ void AOffenseGameModeBase::ActorDied(AActor* DeadActor)
 	{
 		DestroyedTank->HandleDestruction();
 		UpdatePlayerPawnsCount();
-		UE_LOG(LogTemp, Warning, TEXT("Destroyed player tank. %d/%d remain"), GetCurrentTanksCount(), GetInitialTanksCount());
+		//UE_LOG(LogTemp, Warning, TEXT("Destroyed player tank. %d/%d remain"), GetCurrentTanksCount(), GetInitialTanksCount());
 	}
 	else if (APawnTurret* DestroyedTurret = Cast<APawnTurret>(DeadActor))
 	{
 		DestroyedTurret->HandleDestruction();
 		UpdateTargetTurretCount();
-		UE_LOG(LogTemp, Warning, TEXT("Destroyed turret tank. %d/%d remain"), GetCurrentTurretsCount(), GetInitialTurretsCount());
+		//UE_LOG(LogTemp, Warning, TEXT("Destroyed turret tank. %d/%d remain"), GetCurrentTurretsCount(), GetInitialTurretsCount());
 	}
 
 	CheckEndGameConditions();
@@ -37,17 +37,20 @@ void AOffenseGameModeBase::CheckEndGameConditions()
 	if (GetCurrentTurretsCount() == 0)
 	{
 		UE_LOG(LogTemp, Error, TEXT("GAME OVER: Every turret has been destroyed"));
+		HandleGameOver();
 	}
 	//no tank is alive
 	 if (GetCurrentTanksCount() == 0)
 	{
 		UE_LOG(LogTemp, Error, TEXT("GAME OVER: Every tank has been destroyed"));
+		HandleGameOver();
 	}
 
 	//every living tank has reached EndGame
 	else if (GetCurrentEndGameTanksCount() == GetCurrentTanksCount() || GetCurrentEndGameTanksCount() == GetInitialTanksCount())
 	{
 		UE_LOG(LogTemp, Error, TEXT("GAME OVER: Every living tank has reached EndGame"));
+		HandleGameOver();
 	}
 }
 
@@ -60,7 +63,7 @@ void AOffenseGameModeBase::UpdateEndGameTanks(APawnTank* Tank)
 {
 	GetGameState<AOffenseStateBase>()->EndGameTankActors.Add(Tank);
 	CheckEndGameConditions();
-	UE_LOG(LogTemp, Warning, TEXT("%d out of %d tanks reached endgame"), GetCurrentEndGameTanksCount(), GetCurrentTanksCount());
+	//UE_LOG(LogTemp, Warning, TEXT("%d out of %d tanks reached endgame"), GetCurrentEndGameTanksCount(), GetCurrentTanksCount());
 }
 
 void AOffenseGameModeBase::UpdateTargetTurretCount()

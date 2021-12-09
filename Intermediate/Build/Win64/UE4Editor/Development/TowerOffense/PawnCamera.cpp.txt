@@ -1,0 +1,7 @@
+D:\Programs\UE4 Projects\TowerOffense\Intermediate\Build\Win64\UE4Editor\Development\TowerOffense\Definitions.TowerOffense.h
+D:\Programs\UE4 Projects\TowerOffense\Source\TowerOffense\Pawns\PawnCamera.h
+D:\Programs\UE4 Projects\TowerOffense\Intermediate\Build\Win64\UE4Editor\Inc\TowerOffense\PawnCamera.generated.h
+D:\Programs\Unreal Engine 4\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/SpringArmComponent.h
+D:\Programs\Unreal Engine 4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SpringArmComponent.generated.h
+D:\Programs\Unreal Engine 4\UE_4.26\Engine\Source\Runtime\Engine\Classes\Camera/CameraComponent.h
+D:\Programs\Unreal Engine 4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CameraComponent.generated.h
