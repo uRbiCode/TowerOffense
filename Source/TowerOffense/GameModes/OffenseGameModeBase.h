@@ -2,7 +2,6 @@
 
 #pragma once
 
-#include "TowerOffense/GameStates/OffenseStateBase.h"
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
 #include "OffenseGameModeBase.generated.h"
@@ -15,31 +14,20 @@ class TOWEROFFENSE_API AOffenseGameModeBase : public AGameModeBase
 	GENERATED_BODY()
 
 private:
-	TArray<AActor*> TankActors;
-	TArray<AActor*> TurretActors;
+	void UpdateTargetTurretCount();
+	void UpdatePlayerPawnsCount();	
 
-	int32 InitialPlayerPawns;
-	int32 InitialTargetTurrets;
+	void CheckEndGameConditions();
+	void HandleGameOver();
 
-	//updates and returns current turrets count
-	int32 UpdateTargetTurretCount();
-	
-	//updates and returns current player pawns (tanks) count
-	int32 UpdatePlayerPawnsCount();
-	void HandleGameStart();
-	void HandleGameOver(bool PlayerWon);
+	int32 GetInitialTanksCount();
+	int32 GetInitialTurretsCount();
+	int32 GetCurrentTanksCount();
+	int32 GetCurrentTurretsCount();
 
 public:
 	AOffenseGameModeBase();
-	void ActorDied(AActor* DeadActor);
-	UFUNCTION(BluePrintCallable)
-	virtual void UpdateEndGameTanks(APawnTank* Tank);
 
-	int32 GetInitialPlayerPawns() { return InitialPlayerPawns; };
-	int32 GetInitialTargetTurrets() { return InitialTargetTurrets; };
-
-	void CheckEndGameConditions(int32 TanksCount);
-
-protected:
-	virtual void BeginPlay() override;
+	void ActorDied(AActor* DeadActor);	
+	void UpdateEndGameTanks(APawnTank* Tank);
 };
