@@ -2,11 +2,11 @@
 
 #pragma once
 
+#include "TowerOffense/GameStates/OffenseStateBase.h"
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
 #include "OffenseGameModeBase.generated.h"
 
-class APawnTurret;
 class APawnTank;
 
 UCLASS()
@@ -21,17 +21,25 @@ private:
 	int32 InitialPlayerPawns;
 	int32 InitialTargetTurrets;
 
-	int32 GetTargetTurretCount();
-	int32 GetPlayerPawnsCount();
+	//updates and returns current turrets count
+	int32 UpdateTargetTurretCount();
+	
+	//updates and returns current player pawns (tanks) count
+	int32 UpdatePlayerPawnsCount();
 	void HandleGameStart();
 	void HandleGameOver(bool PlayerWon);
 
 public:
+	AOffenseGameModeBase();
 	void ActorDied(AActor* DeadActor);
+	UFUNCTION(BluePrintCallable)
+	virtual void UpdateEndGameTanks(APawnTank* Tank);
+
+	int32 GetInitialPlayerPawns() { return InitialPlayerPawns; };
+	int32 GetInitialTargetTurrets() { return InitialTargetTurrets; };
+
+	void CheckEndGameConditions(int32 TanksCount);
 
 protected:
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Game Loop")
-		int32 StartDelay = 3;
-
 	virtual void BeginPlay() override;
 };

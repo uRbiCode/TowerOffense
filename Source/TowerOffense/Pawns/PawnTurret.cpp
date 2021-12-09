@@ -22,9 +22,7 @@ void APawnTurret::BeginPlay()
 
 void APawnTurret::HandleDestruction()
 {
-	Super::HandleDestruction();
-
-	
+	Super::HandleDestruction();	
 }
 
 // Called every frame
