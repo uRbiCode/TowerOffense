@@ -62,6 +62,7 @@ void AOffenseGameModeBase::HandleGameOver()
 void AOffenseGameModeBase::UpdateEndGameTanks(APawnTank* Tank)
 {
 	GetGameState<AOffenseStateBase>()->EndGameTankActors.Add(Tank);
+	Tank->SetActorHiddenInGame(true);
 	CheckEndGameConditions();
 	//UE_LOG(LogTemp, Warning, TEXT("%d out of %d tanks reached endgame"), GetCurrentEndGameTanksCount(), GetCurrentTanksCount());
 }
