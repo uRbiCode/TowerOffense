@@ -28,6 +28,9 @@ private:
 	UFUNCTION()
 		void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 
+	//simulates hit chance
+	bool CalculateHitChance();
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

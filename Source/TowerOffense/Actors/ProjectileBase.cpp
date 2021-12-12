@@ -29,12 +29,19 @@ void AProjectileBase::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UP
 		return;
 	}
 
-	if (OtherActor && OtherActor != this && OtherActor != MyOwner)
+	if (OtherActor && OtherActor != this && OtherActor != MyOwner && CalculateHitChance())
 	{
 		UGameplayStatics::ApplyDamage(OtherActor, Damage, MyOwner->GetInstigatorController(), this, DamageType);
 	}
 	
 	Destroy();
+}
+
+bool AProjectileBase::CalculateHitChance()
+{
+	float Result = FMath::RandRange(0.f, 1.f);
+	if (Result <= .9f) return true;
+	else return false;
 }
 
 // Called when the game starts or when spawned
