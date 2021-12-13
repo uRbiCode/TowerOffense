@@ -54,11 +54,6 @@ void AOffenseGameModeBase::CheckEndGameConditions()
 	}
 }
 
-void AOffenseGameModeBase::HandleGameOver()
-{
-	//TODO: implement
-}
-
 void AOffenseGameModeBase::UpdateEndGameTanks(APawnTank* Tank)
 {
 	GetGameState<AOffenseStateBase>()->EndGameTankActors.Add(Tank);

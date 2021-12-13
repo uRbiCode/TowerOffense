@@ -13,8 +13,7 @@ class TOWEROFFENSE_API AOffenseGameModeBase : public AGameModeBase
 	GENERATED_BODY()
 
 private:
-	void CheckEndGameConditions();
-	void HandleGameOver();
+	void CheckEndGameConditions();	
 
 	void UpdateTargetTurretCount();
 	void UpdatePlayerPawnsCount();
@@ -30,4 +29,7 @@ public:
 
 	void ActorDied(AActor* DeadActor);	
 	void UpdateEndGameTanks(APawnTank* Tank);
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "GlobalEvents")
+	void HandleGameOver();
 };

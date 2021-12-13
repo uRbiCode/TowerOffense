@@ -18,8 +18,36 @@ void EmptyLinkFunctionForGeneratedCodeOffenseGameModeBase() {}
 	ENGINE_API UClass* Z_Construct_UClass_AGameModeBase();
 	UPackage* Z_Construct_UPackage__Script_TowerOffense();
 // End Cross Module References
+	static FName NAME_AOffenseGameModeBase_HandleGameOver = FName(TEXT("HandleGameOver"));
+	void AOffenseGameModeBase::HandleGameOver()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_AOffenseGameModeBase_HandleGameOver),NULL);
+	}
 	void AOffenseGameModeBase::StaticRegisterNativesAOffenseGameModeBase()
 	{
+	}
+	struct Z_Construct_UFunction_AOffenseGameModeBase_HandleGameOver_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AOffenseGameModeBase_HandleGameOver_Statics::Function_MetaDataParams[] = {
+		{ "Category", "GlobalEvents" },
+		{ "ModuleRelativePath", "GameModes/OffenseGameModeBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AOffenseGameModeBase_HandleGameOver_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AOffenseGameModeBase, nullptr, "HandleGameOver", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AOffenseGameModeBase_HandleGameOver_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AOffenseGameModeBase_HandleGameOver_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AOffenseGameModeBase_HandleGameOver()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AOffenseGameModeBase_HandleGameOver_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_AOffenseGameModeBase_NoRegister()
 	{
@@ -28,6 +56,7 @@ void EmptyLinkFunctionForGeneratedCodeOffenseGameModeBase() {}
 	struct Z_Construct_UClass_AOffenseGameModeBase_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -37,6 +66,9 @@ void EmptyLinkFunctionForGeneratedCodeOffenseGameModeBase() {}
 	UObject* (*const Z_Construct_UClass_AOffenseGameModeBase_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_AGameModeBase,
 		(UObject* (*)())Z_Construct_UPackage__Script_TowerOffense,
+	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_AOffenseGameModeBase_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AOffenseGameModeBase_HandleGameOver, "HandleGameOver" }, // 1883048532
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOffenseGameModeBase_Statics::Class_MetaDataParams[] = {
@@ -54,11 +86,11 @@ void EmptyLinkFunctionForGeneratedCodeOffenseGameModeBase() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		nullptr,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		0,
 		0,
 		0x009002ACu,
@@ -73,7 +105,7 @@ void EmptyLinkFunctionForGeneratedCodeOffenseGameModeBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AOffenseGameModeBase, 1134611216);
+	IMPLEMENT_CLASS(AOffenseGameModeBase, 651597194);
 	template<> TOWEROFFENSE_API UClass* StaticClass<AOffenseGameModeBase>()
 	{
 		return AOffenseGameModeBase::StaticClass();
