@@ -18,12 +18,6 @@ private:
 	void UpdateTargetTurretCount();
 	void UpdatePlayerPawnsCount();
 
-	int32 GetInitialTanksCount();
-	int32 GetInitialTurretsCount();
-	int32 GetCurrentTanksCount();
-	int32 GetCurrentTurretsCount();
-	int32 GetCurrentEndGameTanksCount();
-
 public:
 	AOffenseGameModeBase();
 
@@ -32,4 +26,15 @@ public:
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "GlobalEvents")
 	void HandleGameOver();
+
+	UFUNCTION(BlueprintCallable, Category = "Getters")
+	int32 GetInitialTanksCount();
+	UFUNCTION(BlueprintCallable, Category = "Getters")
+	int32 GetInitialTurretsCount();
+	UFUNCTION(BlueprintCallable, Category = "Getters")
+	int32 GetCurrentTanksCount();
+	UFUNCTION(BlueprintCallable, Category = "Getters")
+	int32 GetCurrentTurretsCount();
+	UFUNCTION(BlueprintCallable, Category = "Getters")
+	int32 GetCurrentEndGameTanksCount();
 };

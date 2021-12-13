@@ -14,8 +14,24 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define TOWEROFFENSE_OffenseGameModeBase_generated_h
 
 #define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_13_SPARSE_DATA
-#define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_13_RPC_WRAPPERS
-#define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_13_RPC_WRAPPERS_NO_PURE_DECLS
+#define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_13_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execGetCurrentEndGameTanksCount); \
+	DECLARE_FUNCTION(execGetCurrentTurretsCount); \
+	DECLARE_FUNCTION(execGetCurrentTanksCount); \
+	DECLARE_FUNCTION(execGetInitialTurretsCount); \
+	DECLARE_FUNCTION(execGetInitialTanksCount);
+
+
+#define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execGetCurrentEndGameTanksCount); \
+	DECLARE_FUNCTION(execGetCurrentTurretsCount); \
+	DECLARE_FUNCTION(execGetCurrentTanksCount); \
+	DECLARE_FUNCTION(execGetInitialTurretsCount); \
+	DECLARE_FUNCTION(execGetInitialTanksCount);
+
+
 #define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_13_EVENT_PARMS
 #define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_13_CALLBACK_WRAPPERS
 #define TowerOffense_Source_TowerOffense_GameModes_OffenseGameModeBase_h_13_INCLASS_NO_PURE_DECLS \
