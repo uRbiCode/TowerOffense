@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// Created by Patryk Urbañski 2021
 
 
 #include "OffenseGameModeBase.h"
@@ -19,13 +19,11 @@ void AOffenseGameModeBase::ActorDied(AActor* DeadActor)
 	{
 		DestroyedTank->HandleDestruction();
 		UpdatePlayerPawnsCount();
-		//UE_LOG(LogTemp, Warning, TEXT("Destroyed player tank. %d/%d remain"), GetCurrentTanksCount(), GetInitialTanksCount());
 	}
 	else if (APawnTurret* DestroyedTurret = Cast<APawnTurret>(DeadActor))
 	{
 		DestroyedTurret->HandleDestruction();
 		UpdateTargetTurretCount();
-		//UE_LOG(LogTemp, Warning, TEXT("Destroyed turret tank. %d/%d remain"), GetCurrentTurretsCount(), GetInitialTurretsCount());
 	}
 
 	CheckEndGameConditions();
@@ -36,35 +34,27 @@ void AOffenseGameModeBase::CheckEndGameConditions()
 	//no turret is alive
 	if (GetCurrentTurretsCount() == 0)
 	{
-		UE_LOG(LogTemp, Error, TEXT("GAME OVER: Every turret has been destroyed"));
 		HandleGameOver();
 	}
 	//no tank is alive
 	 if (GetCurrentTanksCount() == 0)
 	{
-		UE_LOG(LogTemp, Error, TEXT("GAME OVER: Every tank has been destroyed"));
 		HandleGameOver();
 	}
 
 	//every living tank has reached EndGame
 	else if (GetCurrentEndGameTanksCount() == GetCurrentTanksCount() || GetCurrentEndGameTanksCount() == GetInitialTanksCount())
 	{
-		UE_LOG(LogTemp, Error, TEXT("GAME OVER: Every living tank has reached EndGame"));
+		UpdatePlayerPawnsCount();
 		HandleGameOver();
 	}
-}
-
-void AOffenseGameModeBase::HandleGameOver()
-{
-	//TODO: implement
 }
 
 void AOffenseGameModeBase::UpdateEndGameTanks(APawnTank* Tank)
 {
 	GetGameState<AOffenseStateBase>()->EndGameTankActors.Add(Tank);
-	Tank->SetActorHiddenInGame(true);
+	Tank->HandleDestruction();
 	CheckEndGameConditions();
-	//UE_LOG(LogTemp, Warning, TEXT("%d out of %d tanks reached endgame"), GetCurrentEndGameTanksCount(), GetCurrentTanksCount());
 }
 
 void AOffenseGameModeBase::UpdateTargetTurretCount()

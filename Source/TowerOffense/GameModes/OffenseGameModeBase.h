@@ -1,5 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
+// Created by Patryk Urbañski 2021
 #pragma once
 
 #include "CoreMinimal.h"
@@ -14,21 +13,28 @@ class TOWEROFFENSE_API AOffenseGameModeBase : public AGameModeBase
 	GENERATED_BODY()
 
 private:
-	void CheckEndGameConditions();
-	void HandleGameOver();
+	void CheckEndGameConditions();	
 
 	void UpdateTargetTurretCount();
 	void UpdatePlayerPawnsCount();
-
-	int32 GetInitialTanksCount();
-	int32 GetInitialTurretsCount();
-	int32 GetCurrentTanksCount();
-	int32 GetCurrentTurretsCount();
-	int32 GetCurrentEndGameTanksCount();
 
 public:
 	AOffenseGameModeBase();
 
 	void ActorDied(AActor* DeadActor);	
 	void UpdateEndGameTanks(APawnTank* Tank);
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "GlobalEvents")
+	void HandleGameOver();
+
+	UFUNCTION(BlueprintCallable, Category = "Getters")
+	int32 GetInitialTanksCount();
+	UFUNCTION(BlueprintCallable, Category = "Getters")
+	int32 GetInitialTurretsCount();
+	UFUNCTION(BlueprintCallable, Category = "Getters")
+	int32 GetCurrentTanksCount();
+	UFUNCTION(BlueprintCallable, Category = "Getters")
+	int32 GetCurrentTurretsCount();
+	UFUNCTION(BlueprintCallable, Category = "Getters")
+	int32 GetCurrentEndGameTanksCount();
 };

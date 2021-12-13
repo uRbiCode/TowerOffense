@@ -17,18 +17,18 @@ struct FHitResult;
 #endif
 #define TOWEROFFENSE_ProjectileBase_generated_h
 
-#define TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_14_SPARSE_DATA
-#define TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_14_RPC_WRAPPERS \
+#define TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_13_SPARSE_DATA
+#define TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_13_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execOnHit);
 
 
-#define TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+#define TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execOnHit);
 
 
-#define TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_14_INCLASS_NO_PURE_DECLS \
+#define TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAProjectileBase(); \
 	friend struct Z_Construct_UClass_AProjectileBase_Statics; \
@@ -37,7 +37,7 @@ public: \
 	DECLARE_SERIALIZER(AProjectileBase)
 
 
-#define TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_14_INCLASS \
+#define TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_13_INCLASS \
 private: \
 	static void StaticRegisterNativesAProjectileBase(); \
 	friend struct Z_Construct_UClass_AProjectileBase_Statics; \
@@ -46,7 +46,7 @@ public: \
 	DECLARE_SERIALIZER(AProjectileBase)
 
 
-#define TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_14_STANDARD_CONSTRUCTORS \
+#define TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_13_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AProjectileBase(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AProjectileBase) \
@@ -59,7 +59,7 @@ private: \
 public:
 
 
-#define TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_14_ENHANCED_CONSTRUCTORS \
+#define TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AProjectileBase(AProjectileBase&&); \
@@ -70,7 +70,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AProjectileBase); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AProjectileBase)
 
 
-#define TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_14_PRIVATE_PROPERTY_OFFSET \
+#define TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_13_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__ProjectileMovement() { return STRUCT_OFFSET(AProjectileBase, ProjectileMovement); } \
 	FORCEINLINE static uint32 __PPO__ProjectileMesh() { return STRUCT_OFFSET(AProjectileBase, ProjectileMesh); } \
 	FORCEINLINE static uint32 __PPO__DamageType() { return STRUCT_OFFSET(AProjectileBase, DamageType); } \
@@ -78,27 +78,27 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AProjectileBase); \
 	FORCEINLINE static uint32 __PPO__Damage() { return STRUCT_OFFSET(AProjectileBase, Damage); }
 
 
-#define TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_11_PROLOG
-#define TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_14_GENERATED_BODY_LEGACY \
+#define TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_10_PROLOG
+#define TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_13_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_14_PRIVATE_PROPERTY_OFFSET \
-	TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_14_SPARSE_DATA \
-	TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_14_RPC_WRAPPERS \
-	TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_14_INCLASS \
-	TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_14_STANDARD_CONSTRUCTORS \
+	TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_13_PRIVATE_PROPERTY_OFFSET \
+	TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_13_SPARSE_DATA \
+	TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_13_RPC_WRAPPERS \
+	TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_13_INCLASS \
+	TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_13_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_14_GENERATED_BODY \
+#define TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_14_PRIVATE_PROPERTY_OFFSET \
-	TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_14_SPARSE_DATA \
-	TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
-	TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_14_INCLASS_NO_PURE_DECLS \
-	TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_14_ENHANCED_CONSTRUCTORS \
+	TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_13_PRIVATE_PROPERTY_OFFSET \
+	TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_13_SPARSE_DATA \
+	TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_13_INCLASS_NO_PURE_DECLS \
+	TowerOffense_Source_TowerOffense_Actors_ProjectileBase_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
