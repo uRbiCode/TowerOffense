@@ -45,7 +45,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = "true"))
 		float FireRate = 1.f;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = "true"))
-		float FireRange = 500.f;
+		float FireRange = 1000.f;
 
 	TArray<AActor*> EnemyList;
 	AActor* CurrentTarget = nullptr;

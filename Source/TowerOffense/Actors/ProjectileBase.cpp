@@ -28,7 +28,7 @@ void AProjectileBase::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UP
 		return;
 	}
 
-	if (OtherActor && OtherActor != this && OtherActor != MyOwner && CalculateHitChance())
+	if (OtherActor && OtherActor != this && OtherActor != MyOwner && CalculateDamageChance())
 	{
 		UGameplayStatics::ApplyDamage(OtherActor, Damage, MyOwner->GetInstigatorController(), this, DamageType);
 	}
@@ -36,10 +36,26 @@ void AProjectileBase::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UP
 	Destroy();
 }
 
-bool AProjectileBase::CalculateHitChance()
+//uses Monte Carlo method to calculate if the projectile does damage when hits
+bool AProjectileBase::CalculateDamageChance()
 {
-	float Result = FMath::RandRange(0.f, 1.f);
-	if (Result <= .9f) return true;
+	struct Point { float x; float y; };
+	int32 CirclePointsCounter = 0;
+	int32 SquarePointsCounter = 1000;
+	for (int32 i = 0; i < SquarePointsCounter; i++)
+	{
+		Point NewPoint;
+		NewPoint.x = FMath::RandRange(-1.f, 1.f);
+		NewPoint.y = FMath::RandRange(-1.f, 1.f);
+
+		if (NewPoint.x * NewPoint.x + NewPoint.y * NewPoint.y <= 1.f)
+		{
+			CirclePointsCounter++;
+		}
+	}
+	
+	float tmp = 4.f * CirclePointsCounter / SquarePointsCounter;
+	if (tmp > PI - .06f && tmp < PI + .06f) return true;
 	else return false;
 }
 

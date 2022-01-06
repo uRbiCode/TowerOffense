@@ -26,7 +26,7 @@ class TOWEROFFENSE_API AProjectileBase : public AActor
 		void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 
 	//simulates hit chance
-	bool CalculateHitChance();
+	bool CalculateDamageChance();
 
 protected:
 	// Called when the game starts or when spawned
