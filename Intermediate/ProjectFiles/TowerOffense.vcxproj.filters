@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\TowerOffense.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{196E8062-8909-441E-AFDC-36D4EBDEE825}</UniqueIdentifier>
+      <UniqueIdentifier>{041B6365-1544-4F2A-BC48-8E8FB6D0A982}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TowerOffense.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{E370C682-1021-4090-89E0-5C0A972B8277}</UniqueIdentifier>
+      <UniqueIdentifier>{A60BABEA-3C96-4FDB-8AE1-788FB412D624}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\TowerOffense">
-      <UniqueIdentifier>{4F460FD5-7483-4F8C-98A2-FCA0B6DD5D62}</UniqueIdentifier>
+      <UniqueIdentifier>{4666BDF2-7127-4705-91B0-030164D38835}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TowerOffense\TowerOffense.Build.cs">
       <Filter>Source\TowerOffense</Filter>
@@ -50,7 +50,7 @@
       <Filter>Source\TowerOffense</Filter>
     </ClInclude>
     <Filter Include="Source\TowerOffense\Actors">
-      <UniqueIdentifier>{91CD1C1D-1820-4596-AD85-EDBC5E5C3D29}</UniqueIdentifier>
+      <UniqueIdentifier>{465109D8-B138-4761-B70C-356AD37973D1}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\TowerOffense\Actors\ProjectileBase.cpp">
       <Filter>Source\TowerOffense\Actors</Filter>
@@ -59,7 +59,7 @@
       <Filter>Source\TowerOffense\Actors</Filter>
     </ClInclude>
     <Filter Include="Source\TowerOffense\Components">
-      <UniqueIdentifier>{2251F350-8E3B-453B-A5D7-D9415C22AAB3}</UniqueIdentifier>
+      <UniqueIdentifier>{CCFFC2B8-2893-486A-A3B6-E8C64E11216A}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\TowerOffense\Components\HealthComponent.cpp">
       <Filter>Source\TowerOffense\Components</Filter>
@@ -67,8 +67,17 @@
     <ClInclude Include="..\..\Source\TowerOffense\Components\HealthComponent.h">
       <Filter>Source\TowerOffense\Components</Filter>
     </ClInclude>
+    <Filter Include="Source\TowerOffense\GameInstance">
+      <UniqueIdentifier>{23FCED90-FCDC-4BEA-98A5-703544750E35}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\TowerOffense\GameInstance\OffenseGameInstance.cpp">
+      <Filter>Source\TowerOffense\GameInstance</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TowerOffense\GameInstance\OffenseGameInstance.h">
+      <Filter>Source\TowerOffense\GameInstance</Filter>
+    </ClInclude>
     <Filter Include="Source\TowerOffense\GameModes">
-      <UniqueIdentifier>{275D5DAF-17DD-426B-A9AA-304A5326E663}</UniqueIdentifier>
+      <UniqueIdentifier>{A7549839-3629-45C2-B1D6-782157C3BA06}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\TowerOffense\GameModes\OffenseGameModeBase.cpp">
       <Filter>Source\TowerOffense\GameModes</Filter>
@@ -77,7 +86,7 @@
       <Filter>Source\TowerOffense\GameModes</Filter>
     </ClInclude>
     <Filter Include="Source\TowerOffense\GameStates">
-      <UniqueIdentifier>{6E6C6A08-7084-4959-8842-8D285BEA66B3}</UniqueIdentifier>
+      <UniqueIdentifier>{9570096C-BCDB-448A-925F-FA100831570F}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\TowerOffense\GameStates\OffenseStateBase.cpp">
       <Filter>Source\TowerOffense\GameStates</Filter>
@@ -86,7 +95,7 @@
       <Filter>Source\TowerOffense\GameStates</Filter>
     </ClInclude>
     <Filter Include="Source\TowerOffense\Pawns">
-      <UniqueIdentifier>{9AF7CCEA-1072-44FA-BDE7-64AA34E91C91}</UniqueIdentifier>
+      <UniqueIdentifier>{ADF690EF-5BE8-49C9-8BF5-A25B2F20260A}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\TowerOffense\Pawns\PawnBase.cpp">
       <Filter>Source\TowerOffense\Pawns</Filter>
@@ -113,7 +122,7 @@
       <Filter>Source\TowerOffense\Pawns</Filter>
     </ClInclude>
     <Filter Include="Source\TowerOffense\Volumes">
-      <UniqueIdentifier>{8A3E1441-DD14-4C7B-9E22-00C829911B9E}</UniqueIdentifier>
+      <UniqueIdentifier>{E57D765F-2677-4721-BD41-316639A82646}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\TowerOffense\Volumes\EndGameTriggerVolume.cpp">
       <Filter>Source\TowerOffense\Volumes</Filter>

@@ -5,6 +5,8 @@ D:\Programs\Unreal Engine 4\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFra
 D:\Programs\Unreal Engine 4\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
 D:\Programs\Unreal Engine 4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\MovementComponent.generated.h
 D:\Programs\Unreal Engine 4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ProjectileMovementComponent.generated.h
+D:\Programs\UE4 Projects\TowerOffense\Source\TowerOffense\Actors\../GameInstance/OffenseGameInstance.h
+D:\Programs\UE4 Projects\TowerOffense\Intermediate\Build\Win64\UE4Editor\Inc\TowerOffense\OffenseGameInstance.generated.h
 D:\Programs\Unreal Engine 4\UE_4.26\Engine\Source\Runtime\Engine\Classes\Kismet/GameplayStatics.h
 D:\Programs\Unreal Engine 4\UE_4.26\Engine\Source\Runtime\Engine\Classes\Kismet/KismetSystemLibrary.h
 D:\Programs\Unreal Engine 4\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h
